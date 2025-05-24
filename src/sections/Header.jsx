@@ -60,7 +60,7 @@ const Header = () => {
         >
           <div className="flex items-center gap-3">
             <span className="text-white font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
-            <img src='/public/pattern-3.png' width={50} height={25} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
+            <img src='/images/pattern-3.png' width={50} height={25} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
             <span className="text-white font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
           </div>
         </a>
@@ -87,7 +87,7 @@ const Header = () => {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-white font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
-                      <img src='/public/pattern-3.png' width={60} height={30} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
+                      <img src='/images/pattern-3.png' width={60} height={30} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
                       <span className="text-white font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
                     </div>
                   </a>
