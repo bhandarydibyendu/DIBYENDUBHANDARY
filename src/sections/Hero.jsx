@@ -54,7 +54,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className='relative min-h-screen flex items-center justify-center py-20 max-md:py-12 overflow-hidden'>
+    <section className='relative min-h-screen flex items-center justify-center py-20 max-md:py-12 overflow-hidden max-lg:pt-24 max-lg:pb-12'>
       {/* Background Image with Gradient Overlay */}
       <div className='absolute inset-0 z-0'>
         <img 
@@ -68,23 +68,23 @@ const Hero = () => {
       </div>
 
       <Element name='hero'>
-        <div className='container mx-auto px-4 relative z-10'>
+        <div className='container mx-auto px-4 relative z-10 max-lg:px-6 max-lg:pt-8'>
           <div className='flex justify-between gap-12 max-lg:gap-8 max-lg:flex-col max-lg:text-center'>
             {/* Left Content */}
             <motion.div 
               style={{ y, opacity }}
-              className='relative z-2 flex-1 max-w-2xl max-lg:max-w-full'
+              className='relative z-2 flex-1 max-w-2xl max-lg:max-w-full max-lg:mb-12 max-lg:mt-4'
             >
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className='caption small-2 uppercase text-white bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-semibold tracking-wider mb-3 max-md:mb-2'
+                className='caption small-2 uppercase text-white bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-semibold tracking-wider mb-3 max-md:mb-2 max-lg:mb-4'
               >
                 Fullstack Software Developer
               </motion.div>
               <motion.h2
-                className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#00d4ff] to-[#402de2] bg-clip-text text-transparent max-md:text-3xl"
+                className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#00d4ff] to-[#402de2] bg-clip-text text-transparent max-md:text-3xl max-lg:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -92,7 +92,7 @@ const Hero = () => {
                 SOUMIK MUKHERJEE
               </motion.h2>
               <motion.p
-                className="text-lg md:text-xl text-blue-100/80 mb-8 max-w-2xl leading-relaxed max-md:text-base max-md:mb-6"
+                className="text-lg md:text-xl text-blue-100/80 mb-8 max-w-2xl leading-relaxed max-md:text-base max-md:mb-6 max-lg:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -101,7 +101,7 @@ const Hero = () => {
               </motion.p>
 
               {/* Tech Stack Logos */}
-              <div className='relative w-full h-20 mb-10 overflow-hidden max-md:h-16 max-md:mb-8'>
+              <div className='relative w-full h-20 lg:mb-10 overflow-hidden max-md:h-16 mb-8 max-lg:mb-12'>
                 {/* Gradient Masks for smooth fade-in/out */}
                 <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#02030a] to-transparent z-20" />
                 <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#02030a] to-transparent z-20" />
@@ -153,7 +153,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className='flex gap-4 max-lg:justify-center flex-wrap'
+                className='flex gap-4 max-lg:justify-center flex-wrap mb-8 max-lg:mb-12'
               >
                 <motion.a 
                   href="/SOUMIK MUKHERJEE NEW.pdf"
@@ -187,7 +187,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='relative flex-1 max-w-[400px] max-lg:max-w-[300px] max-md:max-w-[250px] mx-auto'
+              className='relative flex-1 max-w-[400px] max-lg:max-w-full mx-auto max-lg:mt-0 pt-8 max-lg:pt-12'
             >
               <motion.img 
                 src='/soumikmukherjee.png' 

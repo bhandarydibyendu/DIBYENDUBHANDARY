@@ -27,7 +27,7 @@ const Header = () => {
       spy 
       smooth 
       activeClass='nav-active' 
-      className='base-bold text-p4 uppercase transition-all duration-300 cursor-pointer hover:text-p1 hover:scale-105 max-lg:my-4 max-lg:h5 relative group'
+      className='base-bold text-p4 uppercase transition-all duration-300 cursor-pointer hover:text-p1 hover:scale-105 max-lg:my-3 max-lg:text-xl relative group lg:px-4'
     >
       {title}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-p1 transition-all duration-300 group-hover:w-full"></span>
@@ -56,7 +56,7 @@ const Header = () => {
           href="https://www.linkedin.com/in/soumikmukherjee4402" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className='lg:hidden flex-1 cursor-pointer z-2 hover:opacity-80 transition-all duration-300 hover:scale-105'
+          className={clsx('lg:hidden flex-1 cursor-pointer z-2 hover:opacity-80 transition-all duration-300 hover:scale-105', isOpen && 'invisible')}
         >
           <div className="flex items-center gap-3">
             <span className="font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
@@ -65,18 +65,44 @@ const Header = () => {
           </div>
         </a>
         <div className={clsx(
-          'w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2/95 max-lg:backdrop-blur-lg max-lg:opacity-0 max-lg:transition-all max-lg:duration-300',
-          isOpen ? 'max-lg:opacity-100 max-lg:translate-y-0' : 'max-lg:pointer-events-none max-lg:-translate-y-full'
+          'w-full max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:h-screen max-sm:w-4/5 max-lg:w-64 max-lg:bg-s2/95 max-lg:backdrop-blur-lg max-lg:opacity-0 max-lg:transition-all max-lg:duration-300',
+          isOpen ? 'max-lg:opacity-100 max-lg:translate-x-0 max-lg:pointer-events-auto' : 'max-lg:translate-x-full max-lg:pointer-events-none'
         )}>
-          <div className='max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4'>
-            <nav className='max-lg:relative max-lg:z-2 max-lg:my-auto'>
-              <ul className='flex items-center justify-center max-lg:block max-lg:px-12'>
-                <li className='nav-li'>
+          <div className={clsx(
+            'fixed inset-0 bg-black/50 transition-opacity duration-300 lg:hidden',
+            isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          )} onClick={() => setIsOpen(false)}></div>
+
+          <div className='max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:justify-center max-lg:overflow-hidden sidebar-before'>
+            <div className="max-lg:flex items-center justify-between p-4 border-b border-s4/25 lg:hidden">
+                <a 
+                    href="https://www.linkedin.com/in/soumikmukherjee4402" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className='cursor-pointer hover:opacity-80 transition-all duration-300 hover:scale-105'
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
+                      <img src='/pattern-3.png' width={50} height={25} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
+                      <span className="font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
+                    </div>
+                  </a>
+                <button 
+                    className='z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center hover:bg-s4/10 transition-all duration-300 hover:scale-110 text-white'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    X
+                </button>
+            </div>
+
+            <nav className='max-lg:relative max-lg:z-2 max-lg:pt-4 max-lg:flex max-lg:flex-col max-lg:justify-center'>
+              <ul className='lg:flex lg:items-center max-lg:block max-lg:px-6 max-md:px-4'>
+                <li className='nav-li max-lg:mb-4 max-lg:mt-4 max-lg:text-left lg:mr-8'>
                   <NavLink title="about"/>
-                  <div className='dot'/>
+                  <div className='dot lg:block hidden'/>
                   <NavLink title="experience"/>
                 </li>
-                <li className='nav-logo mx-8'>
+                <li className='nav-logo lg:mx-8'>
                   <a 
                     href="https://www.linkedin.com/in/soumikmukherjee4402" 
                     target="_blank" 
@@ -92,12 +118,12 @@ const Header = () => {
                     </div>
                   </a>
                 </li>
-                <li className='nav-li ml-8'>
+                <li className='nav-li max-lg:mb-4 max-lg:mt-4 max-lg:text-left'>
                   <NavLink title="projects"/>
-                  <div className='dot'/>
+                  <div className='dot lg:block hidden'/>
                   <NavLink title="contact"/>
                 </li>
-                <li className='ml-8 flex items-center gap-4 max-lg:mt-8 max-lg:justify-center'>
+                <li className='flex items-center gap-4 max-lg:mt-8 max-lg:justify-center lg:ml-8'>
                   <SocialIcon 
                     href="https://github.com/mukherjeesoumik" 
                     icon={faGithub} 
@@ -129,7 +155,7 @@ const Header = () => {
             label="Email"
           />
           <button 
-            className='z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center hover:bg-s4/10 transition-all duration-300 hover:scale-110' 
+            className={clsx('z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center hover:bg-s4/10 transition-all duration-300 hover:scale-110', isOpen && 'invisible')}
             onClick={() => setIsOpen((prevState) => !prevState)}
           >
             <img 
