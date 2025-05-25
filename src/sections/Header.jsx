@@ -59,9 +59,9 @@ const Header = () => {
           className='lg:hidden flex-1 cursor-pointer z-2 hover:opacity-80 transition-all duration-300 hover:scale-105'
         >
           <div className="flex items-center gap-3">
-            <span className="text-white font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
-            <img src='/images/pattern-3.png' width={50} height={25} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
-            <span className="text-white font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
+            <span className="font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
+            <img src='/pattern-3.png' width={50} height={25} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
+            <span className="font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
           </div>
         </a>
         <div className={clsx(
@@ -86,9 +86,9 @@ const Header = () => {
                     )}
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-white font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
-                      <img src='/images/pattern-3.png' width={60} height={30} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
-                      <span className="text-white font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
+                      <span className="font-bold text-xl bg-gradient-to-r from-p1 to-p2 bg-clip-text text-transparent">SOUMIK</span>
+                      <img src='/pattern-3.png' width={60} height={30} alt='SOUMIK' className="hover:rotate-12 transition-transform duration-300"/>
+                      <span className="font-bold text-xl bg-gradient-to-r from-p2 to-p1 bg-clip-text text-transparent">MUKHERJEE</span>
                     </div>
                   </a>
                 </li>
